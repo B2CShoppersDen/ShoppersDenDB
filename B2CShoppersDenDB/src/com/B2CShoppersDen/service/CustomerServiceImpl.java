@@ -15,6 +15,7 @@ public class CustomerServiceImpl implements CustomerService{
 	public CustomerServiceImpl() {
 		this.customerDao=FactoryCustomerDB.createCustomerDao();
 	}
+	
 
 	@Override
 	public String registerCustomer(RegisterCustomerModel model) throws ClassNotFoundException, SQLException {

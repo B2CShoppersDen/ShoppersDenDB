@@ -10,5 +10,6 @@ public class Transaction {
 	public void setTransactionid(int transactionid) {
 		this.transactionid = transactionid;
 	}
+	
 
 }

@@ -8,6 +8,7 @@ public class Product {
 	private double productPrice;
 	private String productCategory;
 	private String productName;
+	
 	public String getProductName() {
 		return productName;
 	}

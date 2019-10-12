@@ -16,3 +16,4 @@ public interface AdminDAO {
 	public boolean  viewTransactionDetails(Product product) throws ClassNotFoundException, SQLException;
 
 }
+
