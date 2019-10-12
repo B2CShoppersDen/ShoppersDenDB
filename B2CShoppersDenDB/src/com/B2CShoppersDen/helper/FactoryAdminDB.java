@@ -1,27 +1,25 @@
 package com.B2CShoppersDen.helper;
 
-import com.B2CShoppersDen.dao.CustomerDao;
-import com.B2CShoppersDen.dao.CustomerDaoImpl;
+import com.B2CShoppersDen.dao.AdminDAO;
+import com.B2CShoppersDen.dao.AdminDAOImpl;
 import com.B2CShoppersDen.dao.LoginDAO;
 import com.B2CShoppersDen.dao.LoginDAOImpl;
 import com.B2CShoppersDen.service.AdminService;
-import com.B2CShoppersDen.service.CustomerService;
-import com.B2CShoppersDen.service.CustomerServiceImpl;
+import com.B2CShoppersDen.service.AdminServiceImpl;
 import com.B2CShoppersDen.service.LoginService;
 import com.B2CShoppersDen.service.LoginServiceImpl;
 
-public class FactoryCustomerDB {
-	
-	public static CustomerDao createCustomerDao()
+public class FactoryAdminDB {
+	public static AdminDAO createCustomerDao()
 	{
-		CustomerDao customerDao=new CustomerDaoImpl();
-		return customerDao;
+		AdminDAO adminDAO=new AdminDAOImpl();
+		return adminDAO;
 		
 	}
-	public static CustomerService createCustomerService() {
+	public static AdminService createAdminService() {
 		
-		CustomerService customerService=new CustomerServiceImpl();
-		return customerService;
+		AdminService adminService=new AdminServiceImpl();
+		return adminService;
 	}
 	public static LoginDAO createLoginDAO() {
 		LoginDAO loginDAO=new LoginDAOImpl();
@@ -31,5 +29,7 @@ public class FactoryCustomerDB {
 		LoginService loginservice=new LoginServiceImpl();
 		return loginservice;
 	}
-	
 }
+
+
+
