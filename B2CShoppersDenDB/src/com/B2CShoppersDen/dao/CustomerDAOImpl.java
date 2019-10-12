@@ -12,7 +12,7 @@ import com.B2CShoppersDen.entities.Customer;
 import com.B2CShoppersDen.model.LoginModel;
 import com.B2CShoppersDen.integrate.ConnectionManager;
 
-public class CustomerDaoImpl implements CustomerDao{
+public class CustomerDAOImpl implements CustomerDAO{
 
 	@Override
 	public boolean storeCustomerDetails(Customer customer) throws ClassNotFoundException, SQLException {

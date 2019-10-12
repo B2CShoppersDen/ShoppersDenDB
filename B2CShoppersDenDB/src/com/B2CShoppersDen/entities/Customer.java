@@ -1,4 +1,4 @@
-package com.B2CShoppersDen.entities;
+ package com.B2CShoppersDen.entities;
 
 public class Customer {
 

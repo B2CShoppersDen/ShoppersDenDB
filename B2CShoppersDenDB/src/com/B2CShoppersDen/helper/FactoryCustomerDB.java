@@ -1,7 +1,7 @@
 package com.B2CShoppersDen.helper;
 
-import com.B2CShoppersDen.dao.CustomerDao;
-import com.B2CShoppersDen.dao.CustomerDaoImpl;
+import com.B2CShoppersDen.dao.CustomerDAO;
+import com.B2CShoppersDen.dao.CustomerDAOImpl;
 import com.B2CShoppersDen.dao.LoginDAO;
 import com.B2CShoppersDen.dao.LoginDAOImpl;
 import com.B2CShoppersDen.service.AdminService;
@@ -12,9 +12,9 @@ import com.B2CShoppersDen.service.LoginServiceImpl;
 
 public class FactoryCustomerDB {
 	
-	public static CustomerDao createCustomerDao()
+	public static CustomerDAO createCustomerDao()
 	{
-		CustomerDao customerDao=new CustomerDaoImpl();
+		CustomerDAO customerDao=new CustomerDAOImpl();
 		return customerDao;
 		
 	}

@@ -2,16 +2,23 @@ package com.B2CShoppersDen.entities;
 
 public class Product {
 	
-	private String imageUrl;
+	private String productImageUrl;
 	private int productId;
 	private String productDescription;
-	private double price;
-	private String category;
-	public String getImageUrl(){
-		return imageUrl;
+	private double productPrice;
+	private String productCategory;
+	private String productName;
+	public String getProductName() {
+		return productName;
 	}
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public String getProductImageUrl(){
+		return productImageUrl;
+	}
+	public void setProductImageUrl(String imageUrl) {
+		this.productImageUrl = imageUrl;
 	}
 	public int getProductId() {
 		return productId;
@@ -25,31 +32,31 @@ public class Product {
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
 	}
-	public double getPrice() {
-		return price;
+	public double getProductPrice() {
+		return productPrice;
 	}
-	public void setPrice(double price) {
-		this.price = price;
+	public void setProductPrice(double price) {
+		this.productPrice = price;
 	}
-	public String getCategory() {
-		return category;
+	public String getProductCategory() {
+		return productCategory;
 	}
-	public void setCategory(String category) {
-		this.category = category;
+	public void setProductCategory(String category) {
+		this.productCategory = category;
 	}
 	@Override
 	public String toString() {
-		return "Product [imageUrl=" + imageUrl + ", productId=" + productId + ", productDescription="
-				+ productDescription + ", price=" + price + ", category=" + category + "]";
+		return "Product [imageUrl=" + productImageUrl + ", productId=" + productId + ", productDescription="
+				+ productDescription + ", price=" + productPrice + ", category=" + productCategory + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((category == null) ? 0 : category.hashCode());
-		result = prime * result + ((imageUrl == null) ? 0 : imageUrl.hashCode());
+		result = prime * result + ((productCategory == null) ? 0 : productCategory.hashCode());
+		result = prime * result + ((productImageUrl == null) ? 0 : productImageUrl.hashCode());
 		long temp;
-		temp = Double.doubleToLongBits(price);
+		temp = Double.doubleToLongBits(productPrice);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((productDescription == null) ? 0 : productDescription.hashCode());
 		result = prime * result + productId;
@@ -64,17 +71,17 @@ public class Product {
 		if (getClass() != obj.getClass())
 			return false;
 		Product other = (Product) obj;
-		if (category == null) {
-			if (other.category != null)
+		if (productCategory == null) {
+			if (other.productCategory != null)
 				return false;
-		} else if (!category.equals(other.category))
+		} else if (!productCategory.equals(other.productCategory))
 			return false;
-		if (imageUrl == null) {
-			if (other.imageUrl != null)
+		if (productImageUrl == null) {
+			if (other.productImageUrl != null)
 				return false;
-		} else if (!imageUrl.equals(other.imageUrl))
+		} else if (!productImageUrl.equals(other.productImageUrl))
 			return false;
-		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
+		if (Double.doubleToLongBits(productPrice) != Double.doubleToLongBits(other.productPrice))
 			return false;
 		if (productDescription == null) {
 			if (other.productDescription != null)

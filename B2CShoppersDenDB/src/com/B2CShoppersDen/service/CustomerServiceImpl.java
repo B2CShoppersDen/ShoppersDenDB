@@ -3,14 +3,14 @@ package com.B2CShoppersDen.service;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.B2CShoppersDen.dao.CustomerDao;
+import com.B2CShoppersDen.dao.CustomerDAO;
 import com.B2CShoppersDen.entities.Customer;
 import com.B2CShoppersDen.helper.FactoryCustomerDB;
 import com.B2CShoppersDen.model.LoginModel;
 import com.B2CShoppersDen.model.RegisterCustomerModel;
 
 public class CustomerServiceImpl implements CustomerService{
-	private CustomerDao customerDao;
+	private CustomerDAO customerDao;
 	
 	public CustomerServiceImpl() {
 		this.customerDao=FactoryCustomerDB.createCustomerDao();

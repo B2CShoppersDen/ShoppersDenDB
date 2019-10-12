@@ -7,7 +7,7 @@ import java.util.List;
 import com.B2CShoppersDen.entities.Customer;
 import com.B2CShoppersDen.model.LoginModel;
 
-public interface CustomerDao {
+public interface CustomerDAO {
 
 	public boolean storeCustomerDetails(Customer customer)throws ClassNotFoundException,SQLException;
 	
