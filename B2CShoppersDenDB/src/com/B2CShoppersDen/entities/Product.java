@@ -18,8 +18,8 @@ public class Product {
 	public String getProductImageUrl(){
 		return productImageUrl;
 	}
-	public void setProductImageUrl(String imageUrl) {
-		this.productImageUrl = imageUrl;
+	public void setProductImageUrl(String productimageUrl) {
+		this.productImageUrl = productimageUrl;
 	}
 	public int getProductId() {
 		return productId;
@@ -36,20 +36,21 @@ public class Product {
 	public double getProductPrice() {
 		return productPrice;
 	}
-	public void setProductPrice(double price) {
-		this.productPrice = price;
+	public void setProductPrice(double productprice) {
+		this.productPrice = productprice;
 	}
 	public String getProductCategory() {
 		return productCategory;
 	}
-	public void setProductCategory(String category) {
-		this.productCategory = category;
+	public void setProductCategory(String productcategory) {
+		this.productCategory = productcategory;
 	}
 	@Override
 	public String toString() {
 		return "Product [imageUrl=" + productImageUrl + ", productId=" + productId + ", productDescription="
 				+ productDescription + ", price=" + productPrice + ", category=" + productCategory + "]";
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
