@@ -38,14 +38,12 @@ public class AdminDAOImpl implements AdminDAO {
 	}
 
 	@Override
-	public boolean deleteProductDetails(Product product) throws ClassNotFoundException, SQLException {
+	public boolean deleteProductDetails(int id) throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		Connection connection=ConnectionManager.openConnection();
 		PreparedStatement statement=connection.prepareStatement("delete from Producttable where productId=?");
-        System.out.println("Enter ProductId");
-        Scanner scanner =new Scanner(System.in);
-        int choice =scanner.nextInt();
-        statement.setInt(1, choice);
+        
+        statement.setInt(1, id);
         int rows = statement.executeUpdate();
         if(rows>0)
         	 return true;
@@ -54,16 +52,12 @@ public class AdminDAOImpl implements AdminDAO {
 	}
 
 	@Override
-	public boolean updateProductPrice(Product product) throws ClassNotFoundException, SQLException {
+	public boolean updateProductPrice(int productId,double newPrice) throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		Connection connection=ConnectionManager.openConnection();
 		PreparedStatement statement=connection.prepareStatement("update Producttable set productPrice=? where productId=?");
-        System.out.println("Enter ProductId");
-        Scanner scanner =new Scanner(System.in);
-        int choice =scanner.nextInt();
-        System.out.println("Enter New Price");
-        double newPrice = scanner.nextDouble();
-        statement.setInt(2, choice);
+       
+        statement.setInt(2, productId);
         statement.setDouble(1, newPrice);
         int rows = statement.executeUpdate();
         if(rows>0)
@@ -73,14 +67,11 @@ public class AdminDAOImpl implements AdminDAO {
 	}
 
 	@Override
-	public boolean viewTransactionDetails(Product product) throws ClassNotFoundException, SQLException {
+	public boolean viewTransactionDetails(int transactionId) throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		Connection connection = ConnectionManager.openConnection();
 		PreparedStatement statement=connection.prepareStatement("select * from transactiontable where transactionid=?");
-		System.out.println("Enter Transaction Id");
-		Scanner scanner = new Scanner(System.in);
-		int choice = scanner.nextInt();
-		statement.setInt(1, choice);
+		statement.setInt(1, transactionId);
 		ResultSet resultSet = statement.executeQuery();
 	    Transaction transaction = new Transaction();
 		while(resultSet.next()) {

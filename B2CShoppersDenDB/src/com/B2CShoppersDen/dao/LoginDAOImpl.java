@@ -14,7 +14,7 @@ public class LoginDAOImpl implements LoginDAO{
     	//TODO Auto-generated method stub
     	
     	Connection connection=ConnectionManager.openConnection();
-    	String query="......";
+    	String query=". ....";
     	PreparedStatement preparedStatement=connection.prepareStatement(query);
     	    preparedStatement.setString(1, userId);
     	    preparedStatement.setString(2,password);

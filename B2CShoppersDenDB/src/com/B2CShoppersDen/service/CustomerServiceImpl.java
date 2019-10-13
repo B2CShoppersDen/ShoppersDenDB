@@ -10,10 +10,10 @@ import com.B2CShoppersDen.model.LoginModel;
 import com.B2CShoppersDen.model.RegisterCustomerModel;
 
 public class CustomerServiceImpl implements CustomerService{
-	private CustomerDAO customerDao;
+	private CustomerDAO customerDAO;
 	
 	public CustomerServiceImpl() {
-		this.customerDao=FactoryCustomerDB.createCustomerDao();
+		this.customerDAO=FactoryCustomerDB.createCustomerDao();
 	}
 	
 
@@ -30,7 +30,7 @@ public class CustomerServiceImpl implements CustomerService{
 		
 		String result="fail";
 		try {
-			boolean stored=customerDao.storeCustomerDetails(customer);
+			boolean stored=customerDAO.storeCustomerDetails(customer);
 			if(stored)
 				result="success";
 		}

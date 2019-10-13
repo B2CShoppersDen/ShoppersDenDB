@@ -3,6 +3,7 @@ package com.B2CShoppersDen.View;
 import java.util.Scanner;
 
 import com.B2CShoppersDen.controller.AdminController;
+import com.B2CShoppersDen.model.ProductModel;
 
 public class AdminView {
 	public void adminView() {
@@ -13,7 +14,7 @@ public class AdminView {
 			System.out.println("Admin View");
 			System.out.println("1.Add Product");
 			System.out.println("2.Delete Product");
-			System.out.println("3.View Product");
+			System.out.println("3.Update Product");
 			System.out.println("4.View Transactions");
 			
 			System.out.println("Enter your Choice");
@@ -25,11 +26,28 @@ public class AdminView {
 			{
 			case 1: adminController.addProduct();
 					break;
-			case 2: adminController.deleteProduct();
+					
+			case 2: 
+				System.out.println("Enter ProductId");
+		        int id =scanner.nextInt();
+				adminController.deleteProduct(id);
 					break;
-			case 3: adminController.viewProduct();
+					
+					
+			case 3: 
+				 System.out.println("Enter ProductId");
+			        int productId =scanner.nextInt();
+			        System.out.println("Enter New Price");
+			        double newPrice = scanner.nextDouble();
+				
+				adminController.updateProduct(productId,newPrice);
 					break;
-			case 4: adminController.viewTransaction();
+					
+			case 4: 
+				System.out.println("Enter Transaction Id");
+				int transactionId = scanner.nextInt();
+				
+				adminController.viewTransaction(transactionId);
 					break;
 			default: System.out.println("!ERROR [SELECT APPROPRIATE OPTION");
 			adminView();
@@ -41,6 +59,29 @@ public class AdminView {
 			
 		}
 	}
+
+	public ProductModel retriveProduct() {
+		// TODO Auto-generated method stub
+		
+		ProductModel productModel = new ProductModel();
+		productModel.getProductImageUrl();
+		productModel.getProductCategory();
+		productModel.getProductPrice();
+		productModel.getProductDescription();
+		productModel.getProductId();
+		productModel.getProductName();
+		
+		return productModel;
+	
+	}
+	
+	 
+	
+	
+	
+	
+	
+	
 	}
 
 
