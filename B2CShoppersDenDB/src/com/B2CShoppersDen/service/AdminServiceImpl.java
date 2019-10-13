@@ -15,6 +15,8 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public void addProduct()
 	{
+		
+		
 		List<ProductModel> productList = new ArrayList<ProductModel>();
 		Product product = new Product();
 		AdminView adminView = new AdminView();
