@@ -25,7 +25,9 @@ public class AdminServiceImpl implements AdminService {
 		productList.add(productModel);
 		AdminDAOImpl adminDAOImpl = new AdminDAOImpl();
 		try {
+			
 			adminDAOImpl.storeProductDetails(product);
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
