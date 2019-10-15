@@ -21,7 +21,8 @@ public class AdminController {
 	public void addProduct() {
 		// TODO Auto-generated method stub
 		AdminServiceImpl adminServiceImpl = new AdminServiceImpl();
-		adminServiceImpl.addProduct();  
+		adminServiceImpl.addProduct(id);
+		
 		
 	}
 
