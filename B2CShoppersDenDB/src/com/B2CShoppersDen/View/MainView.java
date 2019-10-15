@@ -173,9 +173,25 @@ public class MainView {
 				}catch(Exception e){
 					
 				}
-	}
+			
+			
+		}
+
+	public void viewProductMenu() {
+		// TODO Auto-generated method stub
 		
 	}
+	
+	
+	}
+	
+
+		
+	
+	
+
+	
+	
 		
 			
 	
