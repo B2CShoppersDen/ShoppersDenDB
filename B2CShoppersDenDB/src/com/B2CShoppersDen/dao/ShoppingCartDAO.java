@@ -2,6 +2,8 @@ package com.B2CShoppersDen.dao;
 
 import java.sql.SQLException;
 
+import com.B2CShoppersDen.entities.Product;
+
 /**
  * 
  * @author user
@@ -11,8 +13,10 @@ import java.sql.SQLException;
 
 public interface ShoppingCartDAO {
 	
-	public boolean displayAmount()throws ClassNotFoundException, SQLException;
+
 	
 	public boolean displayCart()throws ClassNotFoundException, SQLException;
+
+	boolean displayAmount(Product product) throws ClassNotFoundException, SQLException;
 
 }

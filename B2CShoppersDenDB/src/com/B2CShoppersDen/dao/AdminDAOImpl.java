@@ -29,7 +29,7 @@ public class AdminDAOImpl implements AdminDAO {
 	
 		int rows=statement.executeUpdate();
 		ConnectionManager.closeConnection();
-		if(rows >0)
+		if(rows >0)                   
 		
 			return true;
 		
