@@ -36,7 +36,7 @@ public class CustomerController {
 			}
 		}
 		
-		}
+	}
 
 	public void viewProduct() {
 		// TODO Auto-generated method stub

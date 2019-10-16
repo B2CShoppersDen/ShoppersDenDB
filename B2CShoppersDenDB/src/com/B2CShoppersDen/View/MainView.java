@@ -177,14 +177,7 @@ public class MainView {
 			
 		}
 
-	public void viewProductMenu() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	}
-	
+}
 
 		
 	
